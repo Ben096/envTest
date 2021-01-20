@@ -1,0 +1,76 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+        "icon": "images/DTTDigital.png",
+        "iconSmall": "images/DTTDigitalSmall.png",
+        "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "DTT Custom Activity",
+          "description": "DTT custom Journey Builder activity POC",
+          "step1Label": "Configure Activity"
+        }
+    },
+    "arguments": {
+        "execute": {
+           "inArguments":[
+				{
+                    "ContactKey": "{{Contact.Key}}" 
+                }									
+			],
+          "outArguments": [],
+          //your server domain/url
+          "url": "https://customactivityv1.herokuapp.com/journeybuilder/execute",
+           "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": true,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+    	//your custom components unique key in marketing cloud
+      "applicationExtensionKey": "7d379ab5-239a-4c0d-9c19-b4d356c8476c",
+      "save": {
+        "url": "https://customactivityv1.herokuapp.com/journeybuilder/save",
+          "verb": "POST",
+        "useJwt": true
+       },
+       "publish": {
+        "url": "https://customactivityv1.herokuapp.com/journeybuilder/publish",
+           "verb": "POST",
+        "useJwt": true
+       },
+      "stop": {
+        "url": "https://customactivityv1.herokuapp.com/journeybuilder/stop",
+           "verb": "POST",
+        "useJwt": true
+      },
+      "validate": {
+        "url": "https://customactivityv1.herokuapp.com/journeybuilder/validate",
+        "verb": "POST",
+        "useJwt": true
+      }
+    },
+    "wizardSteps": [
+        { "label": "Configure Activity", "key": "step1" }
+    ],
+    "userInterfaces": {
+        "configModal": {
+            "height": 400,
+            "width": 1000,
+          "fullscreen": false
+        }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [],
+                "outArguments": []
+            }
+        }
+    }
+}

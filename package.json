@@ -1,0 +1,38 @@
+{
+  "name": "jb-activity-template",
+  "version": "1.0.0",
+  "description": "Journey Builder Activity Template",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devsutd/journey-builder-activity-template.git"
+  },
+  "keywords": [
+    "journey",
+    "builder",
+    "salesforce marketing cloud",
+    "heroku"
+  ],
+  "author": "Devs United",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devsutd/journey-builder-activity-template/issues"
+  },
+  "homepage": "https://github.com/devsutd/journey-builder-activity-template#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bower": "^1.8.0",
+    "errorhandler": "^1.5.0",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^8.0.1",
+    "node-gyp": "^6.1.0",
+    "pg": "^7.17.0",
+    "request": "^2.81.0",
+    "require": "^2.4.20"
+  }
+}
